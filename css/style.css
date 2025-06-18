@@ -1,0 +1,199 @@
+:root {
+  --navy-primary: #0a192f;
+  --navy-light: #172a45;
+  --navy-lightest: #303C55;
+  --text-white: #e6f1ff;
+  --text-slate: #8892b0;
+  --accent: #64ffda;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--navy-primary);
+  color: var(--text-white);
+  line-height: 1.6;
+}
+
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--navy-primary);
+  padding: 1rem 2rem;
+  box-shadow: 0 10px 30px -10px rgba(2,12,27,0.7);
+  z-index: 100;
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+  }
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-slate);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 3rem;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent);
+}
+
+/* Sections */
+section {
+  min-height: 100vh;
+  padding: 100px 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 2rem;
+}
+
+/* Home Section */
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro {
+  font-size: 1.2rem;
+  color: var(--text-slate);
+  margin-bottom: 1.5rem;
+}
+
+.name {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Skills Section */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.skill-category {
+  background-color: var(--navy-light);
+  padding: 2rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+}
+
+.skill-category h3 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.skill-list {
+  list-style: none;
+}
+
+.skill-list li {
+  color: var(--text-slate);
+  margin-bottom: 0.5rem;
+}
+
+/* Resume Section */
+.resume-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.resume-item {
+  background-color: var(--navy-light);
+  padding: 2rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.resume-item:hover {
+  transform: translateY(-5px);
+}
+
+.resume-item h3 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.resume-item .date {
+  color: var(--text-slate);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  background-color: var(--navy-light);
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-slate);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .name {
+    font-size: 3rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  section {
+    padding: 80px 1rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
