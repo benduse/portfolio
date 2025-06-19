@@ -1,0 +1,82 @@
+/* Common styles and utilities */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-gradient-1);
+    color: var(--text-white);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+/* Section titles styling */
+.section-title {
+    color: var(--text-white);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--accent-primary);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* Footer styling */
+footer {
+    background: var(--navy-primary);
+    color: var(--text-slate);
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid var(--border-light);
+}
+
+/* Common hover effects */
+a {
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-primary);
+}
+
+/* Accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--accent-primary);
+    color: var(--navy-primary);
+    padding: 8px;
+    z-index: 1001;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Smooth section transitions */
+section {
+    transition: background-color 0.5s ease;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.75rem;
+    }
+}

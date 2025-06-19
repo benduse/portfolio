@@ -1,0 +1,29 @@
+:root {
+  /* Base colors */
+  --navy-primary: #0a192f;
+  --navy-light: #172a45;
+  --navy-lightest: #303C55;
+  
+  /* Text colors */
+  --text-white: #e6f1ff;
+  --text-slate: #8892b0;
+  
+  /* Accent colors */
+  --accent-primary: #64ffda;    /* Cyan - Primary accent */
+  --accent-secondary: #7B61FF;  /* Purple - Secondary accent */
+  --accent-tertiary: #FF61DC;   /* Pink - Tertiary accent */
+  
+  /* Section background variations */
+  --bg-gradient-1: linear-gradient(120deg, #0a192f 0%, #1a2942 100%);
+  --bg-gradient-2: linear-gradient(120deg, #112240 0%, #1d2d4d 100%);
+  --bg-gradient-3: linear-gradient(120deg, #152a4d 0%, #233656 100%);
+  
+  /* Card and hover effects */
+  --card-bg: rgba(23, 42, 69, 0.7);
+  --hover-bg: rgba(100, 255, 218, 0.1);
+  
+  /* Borders and shadows */
+  --border-light: rgba(230, 241, 255, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --glow-accent: rgba(100, 255, 218, 0.2);
+}
