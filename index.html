@@ -134,56 +134,94 @@
     </section>
 
     <section id="certifications" class="certification-section">
-        <div class="certification-container">
-            <h2 class="section-title">Certifications</h2>
-            <div class="certification-grid">
-            <div class="certification-item" id="web-dev-cert">
-                <h3>Web Development Certification</h3>
-                <p class="cert-provider">Chegg Skills</p>
-                <p class="cert-date">2024</p>
-                <p class="cert-description">Comprehensive web development certification covering modern development stack and best practices:</p>
-                <ul class="cert-topics">
-                    <li>HTML & CSS for modern web layouts</li>
-                    <li>JavaScript programming and DOM manipulation</li>
-                    <li>Development tools: Visual Studio Code</li>
-                    <li>Version Control with Git and GitHub</li>
-                    <li>Test-driven development (TDD) practices</li>
-                </ul>
+        <h2 class="section-title">Certifications</h2>
+        <div class="certifications-accordion">
+            <div class="cert-category" id="web-dev-cert">
+                <button class="cert-header" aria-expanded="false" aria-controls="web-dev-content">
+                    <h3>Web Development Certification</h3>
+                    <span class="cert-preview">Chegg Skills | 2024 | Modern Web Development Stack</span>
+                    <span class="arrow"></span>
+                </button>
+                <div class="cert-content" id="web-dev-content" hidden>
+                    <p class="cert-provider">Chegg Skills</p>
+                    <p class="cert-date">2024</p>
+                    <p class="cert-description">Comprehensive web development certification covering modern development stack and best practices:</p>
+                    <ul class="cert-topics">
+                        <li>HTML & CSS for modern web layouts</li>
+                        <li>JavaScript programming and DOM manipulation</li>
+                        <li>Development tools: Visual Studio Code</li>
+                        <li>Version Control with Git and GitHub</li>
+                        <li>Test-driven development (TDD) practices</li>
+                    </ul>
+                </div>
             </div>
-            <div class="certification-item">
-                <h3>
+
+            <div class="cert-category">
+                <button class="cert-header" aria-expanded="false" aria-controls="google-it-content">
+                    <h3>Google IT Support Certification</h3>
+                    <span class="cert-preview">Google | 2024 | Comprehensive IT Support</span>
+                    <span class="arrow"></span>
+                </button>
+                <div class="cert-content" id="google-it-content" hidden>
+                    <p class="cert-provider">Google</p>
+                    <p class="cert-date">2024</p>
+                    <p class="cert-description">Comprehensive IT support specialization covering:</p>
+                    <ul class="cert-topics">
+                        <li>Technical Support Fundamentals</li>
+                        <li>The Bits and Bytes of Computer Networking</li>
+                        <li>Operating Systems and You: Becoming a Power User</li>
+                        <li>System Administration and IT Infrastructure Services</li>
+                        <li>IT Security: Defense against the digital dark arts</li>
+                    </ul>
                     <a href="https://www.coursera.org/account/accomplishments/specialization/Y199Z7YRVNUQ" 
                        target="_blank" 
                        rel="noopener noreferrer" 
-                       class="cert-title-link">
-                        Google IT Support Certification
+                       class="cert-verify-link">
+                       Verify Certificate <i class="fas fa-external-link-alt"></i>
                     </a>
-                </h3>
-                <p class="cert-provider">Google</p>
-                <p class="cert-date">2024</p>
-                <p class="cert-description">Comprehensive IT support specialization covering:</p>
-                <ul class="cert-topics">
-                    <li>Technical Support Fundamentals</li>
-                    <li>The Bits and Bytes of Computer Networking</li>
-                    <li>Operating Systems and You: Becoming a Power User</li>
-                    <li>System Administration and IT Infrastructure Services</li>
-                    <li>IT Security: Defense against the digital dark arts</li>
-                </ul>
+                </div>
             </div>
-            <div class="certification-item">
-                <h3>UAV Part 107 Drone License</h3>
-                <p class="cert-provider">Federal Aviation Administration</p>
+
+            <div class="cert-category">
+                <button class="cert-header" aria-expanded="false" aria-controls="drone-content">
+                    <h3>UAV Part 107 Drone License</h3>
+                    <span class="cert-preview">Federal Aviation Administration | Commercial Drone Operations</span>
+                    <span class="arrow"></span>
+                </button>
+                <div class="cert-content" id="drone-content" hidden>
+                    <p class="cert-provider">Federal Aviation Administration</p>
+                    <p class="cert-description">Commercial drone pilot license certifying proficiency in:</p>
+                    <ul class="cert-topics">
+                        <li>FAA regulations and flight restrictions</li>
+                        <li>Weather patterns and micrometeorology</li>
+                        <li>Drone operations and safety procedures</li>
+                        <li>Airspace classification and requirements</li>
+                    </ul>
+                </div>
             </div>
-            <div class="certification-item">
-                <h3>
+
+            <div class="cert-category">
+                <button class="cert-header" aria-expanded="false" aria-controls="scrum-content">
+                    <h3>Certified ScrumMaster</h3>
+                    <span class="cert-preview">Scrum Alliance | Agile Project Management</span>
+                    <span class="arrow"></span>
+                </button>
+                <div class="cert-content" id="scrum-content" hidden>
+                    <p class="cert-provider">Scrum Alliance</p>
+                    <p class="cert-description">Professional certification in Agile methodologies covering:</p>
+                    <ul class="cert-topics">
+                        <li>Scrum framework and principles</li>
+                        <li>Sprint planning and execution</li>
+                        <li>Team facilitation and servant leadership</li>
+                        <li>Agile ceremonies and artifacts</li>
+                    </ul>
                     <a href="https://bcert.me/bc/html/show-badge.html?b=mwubenea" 
                        target="_blank" 
                        rel="noopener noreferrer" 
-                       class="cert-title-link">
-                        Certified ScrumMaster
+                       class="cert-verify-link">
+                       Verify Certificate <i class="fas fa-external-link-alt"></i>
                     </a>
-                </h3>
-                <p class="cert-provider">Scrum Alliance</p>
+                </div>
             </div>
         </div>
     </section>

@@ -1,40 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Skills Accordion functionality
-    const skillHeaders = document.querySelectorAll('.skill-header');
-    
-    function toggleAccordion(header) {
-        const content = document.getElementById(header.getAttribute('aria-controls'));
-        const isExpanded = header.getAttribute('aria-expanded') === 'true';
+    // Common accordion functionality
+    function initializeAccordion(containerSelector) {
+        const headers = document.querySelectorAll(`${containerSelector} .skill-header, ${containerSelector} .cert-header`);
         
-        // Update ARIA attributes and toggle visibility
-        header.setAttribute('aria-expanded', !isExpanded);
-        content.setAttribute('aria-hidden', isExpanded);
-        content.hidden = isExpanded;
-        
-        // Optional: close other accordions
-        if (!isExpanded) {
-            skillHeaders.forEach(otherHeader => {
-                if (otherHeader !== header) {
-                    const otherContent = document.getElementById(otherHeader.getAttribute('aria-controls'));
-                    otherHeader.setAttribute('aria-expanded', 'false');
-                    otherContent.setAttribute('aria-hidden', 'true');
-                    otherContent.hidden = true;
+        function toggleAccordion(header) {
+            const content = document.getElementById(header.getAttribute('aria-controls'));
+            const isExpanded = header.getAttribute('aria-expanded') === 'true';
+            
+            // Update ARIA attributes and toggle visibility
+            header.setAttribute('aria-expanded', !isExpanded);
+            content.setAttribute('aria-hidden', isExpanded);
+            content.hidden = isExpanded;
+            
+            // Close other accordions in the same section
+            if (!isExpanded) {
+                headers.forEach(otherHeader => {
+                    if (otherHeader !== header) {
+                        const otherContent = document.getElementById(otherHeader.getAttribute('aria-controls'));
+                        otherHeader.setAttribute('aria-expanded', 'false');
+                        otherContent.setAttribute('aria-hidden', 'true');
+                        otherContent.hidden = true;
+                    }
+                });
+            }
+        }
+
+        headers.forEach(header => {
+            // Click handling
+            header.addEventListener('click', () => toggleAccordion(header));
+            
+            // Keyboard navigation
+            header.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleAccordion(header);
                 }
             });
-        }
+        });
     }
 
-    skillHeaders.forEach(header => {
-        header.addEventListener('click', () => toggleAccordion(header));
-        
-        // Keyboard navigation
-        header.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                toggleAccordion(header);
-            }
-        });
-    });
+    // Initialize accordions for both skills and certifications sections
+    initializeAccordion('#skills');
+    initializeAccordion('#certifications');
 
     // Navigation highlighting
     const sections = document.querySelectorAll('section');
