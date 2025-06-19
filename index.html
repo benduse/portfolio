@@ -35,21 +35,37 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="navbar">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-content">
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#resume">Resume</a></li>
+            <ul class="nav-links" role="menubar">
+                <li role="none">
+                    <a href="#home" role="menuitem" aria-current="page">Home</a>
+                </li>
+                <li role="none">
+                    <a href="#skills" role="menuitem">Skills</a>
+                </li>
+                <li role="none">
+                    <a href="#certifications" role="menuitem">Certifications</a>
+                </li>
+                <li role="none">
+                    <a href="#resume" role="menuitem">Resume</a>
+                </li>
             </ul>
         </div>
     </nav>
 
     <section id="home">
-        <div class="intro">Welcome to My Portfolio</div>
-        <h1 class="name">Professional Portfolio</h1>
-        <p class="intro">My name is Benjamin Niyodusenga. A passionate professional with expertise in Management, Science, and Technology</p>
+        <div class="home-content">
+            <img src="images/Benjamin.jpg" 
+                 alt="Benjamin's Portrait smiling wearing a suit, tie, with crossed arms standing in front of a structure" 
+                 class="profile-image">
+            <div class="text-content">
+                <div class="intro">Welcome to My Portfolio</div>
+                <h1 class="name">Professional Portfolio</h1>
+                <p class="intro">My name is Benjamin Niyodusenga. A passionate professional with expertise in Management, Science, and Technology</p>
+            </div>
+        </div>
     </section>
 
     <section id="skills">

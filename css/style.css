@@ -26,17 +26,17 @@ body {
 
 /* Navigation */
 .navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: var(--navy-primary);
-  padding: 1rem 2rem;
-  box-shadow: 0 10px 30px -10px rgba(2,12,27,0.7);
-  z-index: 100;
-  justify-content: flex-end;
-  align-items: center;
-  display: flex;
-  }
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--navy-primary);
+}
 
 .nav-container {
   max-width: 1200px;
@@ -48,21 +48,64 @@ body {
 }
 
 .nav-links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
-  color: var(--text-slate);
-  text-decoration: none;
-  transition: color 0.3s ease;
-  font-size: 3rem;
+    font-size: 0.9rem; /* Reduced from previous size */
+    text-decoration: none;
+    color: var(--text-slate);
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+    position: relative;
 }
 
 .nav-links a:hover,
-.nav-links a.active {
-  color: var(--accent);
+.nav-links a:focus {
+    color: var(--accent);
+    outline: none;
+}
+
+/* Accessibility focus indicator */
+.nav-links a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Current page indicator */
+.nav-links a[aria-current="page"] {
+    color: var(--accent);
+}
+
+.nav-links a[aria-current="page"]::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0.5rem;
+    right: 0.5rem;
+    height: 2px;
+    background-color: var(--accent);
+}
+
+/* Skip to main content link for keyboard users */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--accent);
+    color: var(--navy-primary);
+    padding: 8px;
+    z-index: 1001;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 0;
 }
 
 /* Sections */
@@ -86,16 +129,46 @@ section {
   justify-content: center;
 }
 
+.home-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.profile-image {
+    width: 100px;  /* Reduced to 100px */
+    height: 112px; /* Maintained aspect ratio */
+    object-fit: cover;
+    border-radius: 6px; /* Reduced border radius to match smaller size */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Adjusted shadow for smaller size */
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.profile-image:hover {
+    transform: translateY(-5px);
+}
+
+.text-content {
+    flex: 1;
+    min-width: 300px;
+}
+
 .intro {
-  font-size: 1.2rem;
-  color: var(--text-slate);
-  margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    color: var(--text-slate);
+    margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
 .name {
-  font-size: 4rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: var(--text-white);
+    margin-bottom: 1.5rem;
 }
 
 /* Skills Section */
@@ -287,6 +360,24 @@ footer {
   section {
     padding: 80px 1rem;
   }
+
+  .home-content {
+        padding: 2rem 1rem;
+        justify-content: center;
+    }
+
+    .profile-image {
+        width: 90px;    /* Slightly smaller on medium screens */
+        height: 101px;  /* Maintained aspect ratio */
+    }
+}
+
+/* Additional mobile adjustment for smaller screens */
+@media (max-width: 480px) {
+    .profile-image {
+        width: 80px;    /* Even smaller on mobile */
+        height: 90px;   /* Maintained aspect ratio */
+    }
 }
 
 /* Animations */
