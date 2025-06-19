@@ -1,0 +1,100 @@
+/* Layout System
+   ========================================================================== */
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+}
+
+/* Grid System */
+.grid-auto-fit {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-6);
+}
+
+.grid-2-cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+}
+
+/* Flexbox Utilities */
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Section Layouts */
+.section {
+    padding: var(--space-12) 0;
+}
+
+.section-inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--space-8);
+}
+
+/* Cards Layout */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-6);
+    padding: var(--space-4);
+}
+
+.card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-2-cols {
+        grid-template-columns: 1fr;
+    }
+    
+    .section {
+        padding: var(--space-8) 0;
+    }
+    
+    .card {
+        padding: var(--space-4);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 var(--space-2);
+    }
+}

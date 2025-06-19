@@ -1,7 +1,9 @@
 /* Import CSS modules */
-@import 'modules/variables.css';
-@import 'modules/common.css';
-@import 'modules/home.css';
+@import 'modules/variables.css';  /* Variables first for global access */
+@import 'modules/mixins.css';     /* Mixins second for utility classes */
+@import 'modules/layout.css';     /* Layout system and grid */
+@import 'modules/common.css';     /* Common styles and base elements */
+@import 'modules/home.css';       /* Section-specific styles */
 @import 'modules/skills.css';
 @import 'modules/certifications.css';
 @import 'modules/resume.css';

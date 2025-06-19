@@ -1,7 +1,7 @@
 /* Skills section styling */
 #skills {
     background: var(--bg-gradient-2);
-    padding: 80px 0;
+    padding: 80px 0; /* Using section-padding */
 }
 
 .skills-grid {
@@ -27,6 +27,7 @@
 .skill-category h3 {
     color: var(--accent-primary);
     margin-bottom: 1rem;
+    font-size: var(--text-lg);
 }
 
 .skill-list {
