@@ -78,36 +78,57 @@
 
     <section id="skills">
         <h2 class="section-title">Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Web Development <a href="#web-dev-cert" class="cert-link" title="View Web Development Certification">[View Certificate]</a></h3>
-                <ul class="skill-list">
-                    <li>HTML & CSS</li>
-                    <li>JavaScript</li>
-                    <li>Node.js</li>
-                    <li>Responsive Web Design</li>
-                    <li>SQL</li>
-                </ul>
+        <div class="skills-accordion">
+            <div class="skill-category" data-skills="HTML, CSS, JavaScript, Node.js, Responsive Design, SQL">
+                <button class="skill-header" aria-expanded="false" aria-controls="web-dev-content">
+                    <h3>Web Development</h3>
+                    <a href="#web-dev-cert" class="cert-link" title="View Web Development Certification">[View Certificate]</a>
+                    <span class="skill-preview">HTML, CSS, JavaScript, Node.js, Responsive Design, SQL</span>
+                    <span class="arrow"></span>
+                </button>
+                <div class="skill-content" id="web-dev-content" hidden>
+                    <ul class="skill-list">
+                        <li>HTML & CSS</li>
+                        <li>JavaScript</li>
+                        <li>Node.js</li>
+                        <li>Responsive Web Design</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
             </div>
-            <div class="skill-category">
-                <h3>Development Tools</h3>
-                <ul class="skill-list">
-                    <li>Git</li>
-                    <li>GitHub</li>
-                    <li>Customer Relation Management Software (CRM)</li>
-                    <li>Microsoft applications (Excel, Word, Outlook, PowerPoint)</li>
-                    <li>Adobe Cloud (Illustrator, Photoshop, Lightroom)</li>
-                </ul>
+
+            <div class="skill-category" data-skills="Git, GitHub, CRM, Microsoft Office, Adobe Cloud">
+                <button class="skill-header" aria-expanded="false" aria-controls="dev-tools-content">
+                    <h3>Development Tools</h3>
+                    <span class="skill-preview">Git, GitHub, CRM, Microsoft Office, Adobe Cloud</span>
+                    <span class="arrow"></span>
+                </button>
+                <div class="skill-content" id="dev-tools-content" hidden>
+                    <ul class="skill-list">
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>Customer Relation Management Software (CRM)</li>
+                        <li>Microsoft applications (Excel, Word, Outlook, PowerPoint)</li>
+                        <li>Adobe Cloud (Illustrator, Photoshop, Lightroom)</li>
+                    </ul>
+                </div>
             </div>
-            <div class="skill-category">
-                <h3>Business & Professional</h3>
-                <ul class="skill-list">
-                    <li>Sales</li>
-                    <li>Management</li>
-                    <li>Leadership and Teamwork</li>
-                    <li>Problem-solving and Critical thinking</li>
-                    <li>Project Management</li>
-                </ul>
+
+            <div class="skill-category" data-skills="Sales, Management, Leadership, Problem-solving, Project Management">
+                <button class="skill-header" aria-expanded="false" aria-controls="business-content">
+                    <h3>Business & Professional</h3>
+                    <span class="skill-preview">Sales, Management, Leadership, Problem-solving, Project Management</span>
+                    <span class="arrow"></span>
+                </button>
+                <div class="skill-content" id="business-content" hidden>
+                    <ul class="skill-list">
+                        <li>Sales</li>
+                        <li>Management</li>
+                        <li>Leadership and Teamwork</li>
+                        <li>Problem-solving and Critical thinking</li>
+                        <li>Project Management</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
