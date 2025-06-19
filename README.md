@@ -237,3 +237,57 @@ Key Features:
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details.
+
+## 🧪 Testing
+
+### Playwright E2E Testing
+The portfolio uses Playwright for end-to-end testing to ensure all features work as expected across different browsers.
+
+```bash
+# Run tests
+npm run test
+
+# Run tests with UI
+npm run test:ui
+
+# Run tests in specific browser
+npm run test:chrome
+npm run test:firefox
+npm run test:safari
+```
+
+### Test Coverage
+
+#### Navigation Tests
+- Page load and initial render
+- Navigation between sections
+- Mobile menu functionality
+- Smooth scroll behavior
+- Active section highlighting
+
+#### Interactive Features Tests
+- Skills accordion expansion/collapse
+- Certification details visibility
+- Timeline interactions
+- Hover state previews
+- Form validation (if applicable)
+
+#### Accessibility Tests
+- ARIA attributes presence
+- Keyboard navigation
+- Focus management
+- Screen reader compatibility
+- Color contrast compliance
+
+#### Responsive Design Tests
+- Breakpoint transitions
+- Mobile layout verification
+- Touch interactions
+- Content reflow checks
+- Image scaling
+
+### Running Tests Locally
+1. Install dependencies: `npm install`
+2. Install browsers: `npx playwright install`
+3. Run tests: `npm run test`
+4. View report: `npm run test:report`
