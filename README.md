@@ -8,21 +8,65 @@ This portfolio website showcases my professional journey, including my education
 
 ## ✨ Features
 
-- 🎨 Professional Navy Blue Design Theme
-- 📱 Mobile-Friendly Responsive Layout
-- 🔄 Smooth Section Navigation
+- 🎨 Professional Navy Blue Design Theme with Enhanced Color System
+- 📱 Mobile-First Responsive Layout
+- 🔄 Smooth Section Navigation with Accessibility Features
 - ✨ Modern Animations and Transitions
 - 📑 Comprehensive Skills Showcase
 - 💼 Detailed Experience Timeline
-- 🎓 Education and Certifications
-- � Conference Presentations
+- 🎓 Education and Certifications with Verification Links
+- 🎯 Conference Presentations
+- 🖼️ Profile Image with Proper Alt Text for Accessibility
+- 🎨 Modular CSS Architecture
+
+## 🎨 Design System
+
+### Color Palette
+- Primary Navy: Various shades for depth and hierarchy
+- Accent Colors: Cyan, Purple, and Pink for visual interest
+- Text Colors: High-contrast whites and slates for readability
+- Semantic Colors: Purpose-driven color application
+
+### Typography
+- Responsive font sizing
+- Clear hierarchy with semantic headings
+- Optimized line heights and spacing
+- Consistent font families
+
+### Layout System
+- Container-based layouts
+- CSS Grid for responsive designs
+- Flexbox for component layouts
+- Consistent spacing scale
 
 ## 🛠️ Technologies Used
 
-- HTML5
-- CSS3
+- HTML5 with Semantic Markup
+- Modular CSS3 Architecture
+  - Variables for theming
+  - Utility classes
+  - Component-based styles
+  - Responsive layouts
 - JavaScript (Vanilla)
 - Google Fonts (Roboto)
+
+## 📦 CSS Architecture
+
+The CSS is organized into modular components:
+
+```css
+styles/
+├── modules/
+│   ├── variables.css    # Global variables and themes
+│   ├── mixins.css       # Reusable patterns and utilities
+│   ├── layout.css       # Grid and layout systems
+│   ├── common.css       # Base styles and typography
+│   ├── home.css         # Home section styles
+│   ├── skills.css       # Skills section styles
+│   ├── certifications.css # Certification styles
+│   └── resume.css       # Resume section styles
+└── style.css            # Main stylesheet
+```
 
 ## 🎯 Sections
 
@@ -30,13 +74,29 @@ This portfolio website showcases my professional journey, including my education
    - Professional introduction
    - Background in Management, Science, and Technology
    - Clean, modern design
+   - Optimized profile image display
 
 2. **Skills**
-   - Technical Skills (CRM, Microsoft Applications, Adobe Cloud)
-   - Professional Skills (Leadership, Problem-solving, Project Management)
-   - Languages (English, Spanish, French)
+   - Technical Skills
+     - Web Development (HTML, CSS, JavaScript)
+     - CRM and Microsoft Applications
+     - Adobe Cloud
+   - Development Tools
+     - Git/GitHub
+     - Visual Studio Code
+     - Test-Driven Development
+   - Professional Skills
+     - Leadership and Management
+     - Problem-solving
+     - Project Management
 
-3. **Resume**
+3. **Certifications**
+   - Interactive certification cards
+   - Verified certification links
+   - Detailed course contents
+   - Professional badges
+
+4. **Resume**
    - Education
      - Bachelor of Science in Integrated Science (University of Nebraska Lincoln)
      - Bachelor of Arts in Management (Southern New Hampshire University)
@@ -48,68 +108,57 @@ This portfolio website showcases my professional journey, including my education
      - International conference presentations
      - Professional certifications including Google IT Support, Web Development, and Drone License
 
-## 🚀 Getting Started
+## 🌟 Recent Enhancements
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/portfolio.git
-   ```
+### Accessibility Improvements
+- Semantic HTML structure
+- ARIA labels and roles
+- Keyboard navigation support
+- Skip to main content link
+- High contrast color scheme
+- Descriptive alt texts
 
-2. Navigate to the project directory:
-   ```bash
-   cd portfolio
-   ```
+### Performance Optimizations
+- Modular CSS architecture
+- Optimized asset loading
+- Responsive images
+- Efficient CSS selectors
+- Reduced CSS redundancy
 
-3. Open `index.html` in your preferred browser.
+### Visual Enhancements
+- Enhanced color system
+- Improved typography scale
+- Consistent spacing
+- Better visual hierarchy
+- Smooth transitions
+- Interactive elements
 
-## � Professional Background
+### Code Quality
+- DRY (Don't Repeat Yourself) CSS
+- BEM-like naming conventions
+- Consistent formatting
+- Clear documentation
+- Maintainable structure
 
-### Education
-- Bachelor of Science in Integrated Science (University of Nebraska Lincoln, 2019-2023)
-- Bachelor of Arts in Management (Southern New Hampshire University, 2016-2019)
+## 📱 Responsive Design
 
-### Key Experience
-- Outside Sales Representative at Spectrum (2023-2024)
-- Digital Phenotyping at BASF (2023)
-- Soil Laboratory Research Assistant (2022-2023)
-- Chief of Operations at Residence Hall Association (2021)
+- Mobile-first approach
+- Fluid typography
+- Flexible grid system
+- Adaptive layouts
+- Optimized images
+- Touch-friendly interactions
 
-### Technical Proficiencies
-- Customer Relation Management (CRM) Software
-- Microsoft Office Suite
-- Adobe Creative Cloud
-- Project Management Tools
+## 🔜 Future Improvements
 
-## 🌟 Achievements
+- Dark/Light theme toggle
+- More interactive elements
+- Portfolio project showcase
+- Blog integration
+- Contact form
+- Performance metrics
+- Additional animations
 
-### Conference Presentations
-- ASA-CSSA-SSSA International Annual Meeting (2022)
-- University of Nebraska-Lincoln Summer Research Symposium (2022)
+## 📄 License
 
-### Certifications
-- Google IT Support Certification (2024)
-- Web Development from Chegg skills (2024)
-- UAV Part 107 Drone License
-- Certified ScrumMaster
-
-## 🛠️ Technical Details
-
-The portfolio website is built with:
-- HTML5 for structure
-- CSS3 for styling and animations
-- JavaScript for interactive features
-
-## � Responsive Design
-
-The portfolio is fully responsive and optimized for all devices:
-- Desktop computers
-- Tablets
-- Mobile phones
-
-## 🎨 Design Features
-
-- Professional navy blue color scheme
-- Modern card-based layout
-- Smooth scrolling navigation
-- Interactive elements and transitions
-- Clean and elegant typography
+This project is licensed under the MIT License - see the LICENSE.md file for details.
