@@ -43,3 +43,47 @@
     transition: transform 0.3s ease;
     flex-shrink: 0;
 }
+
+/* Enhanced introduction section styling */
+.name {
+    color: var(--text-white);
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-4);
+    font-weight: 700;
+}
+
+.intro {
+    color: var(--text-slate);
+    font-size: var(--font-size-lg);
+    line-height: 1.6;
+    margin-bottom: var(--space-4);
+}
+
+.intro-detail {
+    color: var(--text-slate);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    margin-bottom: var(--space-4);
+    max-width: 65ch;
+}
+
+/* Highlight key terms */
+.intro strong {
+    color: var(--accent-primary);
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .name {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .intro {
+        font-size: var(--font-size-base);
+    }
+    
+    .intro-detail {
+        font-size: var(--font-size-sm);
+    }
+}
